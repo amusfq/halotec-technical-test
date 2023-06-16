@@ -1,0 +1,244 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #f4f5fa;
+}
+
+.sidebar-item {
+  margin-right: 5px;
+  padding: 8px 0px;
+  color: #414141;
+}
+
+.sidebar-item:hover {
+  background: #0f56b3;
+  border-radius: 0px 12px 12px 0px;
+  color: white;
+}
+
+.timeline-steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.timeline-steps .timeline-step {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 1rem;
+}
+
+.timeline-steps .timeline-content {
+  width: 8rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .timeline-steps .timeline-content {
+    width: 11rem;
+  }
+  .timeline-steps .timeline-step:not(:last-child):after {
+    content: "";
+    display: block;
+    border-top: 0.15rem solid #e4e4e4;
+    width: 5rem;
+    position: absolute;
+    left: 7.5rem;
+    top: 1rem;
+  }
+  .timeline-steps .timeline-step:not(:first-child):before {
+    content: "";
+    display: block;
+    border-top: 0.15rem solid #e4e4e4;
+    width: 5rem;
+    position: absolute;
+    right: 7.5rem;
+    top: 1rem;
+  }
+  .timeline-steps .timeline-step.active-after:not(:last-child):before {
+    border-top: 0.15rem solid #fed303;
+  }
+  .timeline-steps
+    .timeline-step.active-before.active-after:not(:last-child):after {
+    border-top: 0.15rem solid #fed303;
+  }
+}
+
+.timeline-steps .timeline-content .inner-circle {
+  border-radius: 1.5rem;
+  height: 2rem;
+  width: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e4e4e4;
+  font-weight: 700;
+}
+.timeline-steps .timeline-content .inner-circle.active {
+  background-color: #fed303;
+}
+
+.nav-tabs .nav-link {
+  color: #585757;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+  color: #0085ff;
+  border: 0;
+  border-bottom: 2px solid #0085ff;
+}
+
+.timeline {
+  position: relative;
+  border-color: rgba(160, 175, 185, 0.15);
+  padding: 0;
+  margin: 0;
+}
+
+.tl-item {
+  border-radius: 3px;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tl-item > * {
+  padding: 10px;
+}
+
+.tl-item .avatar {
+  z-index: 2;
+}
+
+.tl-item:last-child .tl-dot:after {
+  display: none;
+}
+
+.tl-item.active .tl-dot:before {
+  border-color: #448bff;
+  box-shadow: 0 0 0 4px rgba(68, 139, 255, 0.2);
+}
+
+.tl-item:last-child .tl-dot:after {
+  display: none;
+}
+
+.tl-item.active .tl-dot:before {
+  border-color: #448bff;
+  box-shadow: 0 0 0 4px rgba(68, 139, 255, 0.2);
+}
+
+.tl-dot {
+  position: relative;
+  border-color: rgba(160, 175, 185, 0.15);
+}
+
+.tl-dot:after,
+.tl-dot:before {
+  content: "";
+  position: absolute;
+  border-color: inherit;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tl-dot:after {
+  width: 0;
+  height: auto;
+  top: 35px;
+  bottom: -15px;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-radius: 0;
+}
+
+.tl-item.active .tl-dot:before {
+  border-color: #448bff;
+  box-shadow: 0 0 0 4px rgba(68, 139, 255, 0.2);
+}
+
+.tl-dot {
+  position: relative;
+  border-color: rgba(160, 175, 185, 0.15);
+}
+
+.tl-dot:after,
+.tl-dot:before {
+  content: "";
+  position: absolute;
+  border-color: inherit;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tl-dot:after {
+  width: 0;
+  height: auto;
+  top: 35px;
+  bottom: -15px;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-radius: 0;
+}
+
+.tl-content p:last-child {
+  margin-bottom: 0;
+}
+
+.tl-date {
+  font-size: 0.85em;
+  margin-top: 2px;
+  min-width: 100px;
+  max-width: 100px;
+}
+
+.tl-title {
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.tl-subtitle {
+  font-size: 12px;
+}
+
+.tl-success {
+  background: #8fd79f66;
+  color: #195627;
+}
+
+.dot-success:before {
+  background: #5bb46f;
+}
+
+.tl-number {
+  position: absolute;
+  top: 16px;
+  left: 7px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
